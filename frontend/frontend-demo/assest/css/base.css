@@ -1,0 +1,32 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #000022;
+    --main-color: #75A3E9;
+    --highlight-color: #1f64ff;
+}
+
+.text_highlight {
+    color: var(--highlight-color);
+    display: inline-block;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; 
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    color: var(--text-color);
+}
+
+hr {
+    width: 100px;
+    border: 3px solid var(--highlight-color);
+    background: var(--highlight-color);
+    margin: auto;
+    margin-top: 45px;
+    border-radius: 3px;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./assest/css/base.css">
+    <link rel="stylesheet" href="./assest/css/main.css">
+    <title>Distracted Driver</title>
+</head>
+<body>
+    <header id="header">
+        <div class="row header_container">
+            <div class="col-4 header_navbar">
+                <a href="#infomation"class="header_navbar--content">INFORMATION</a>
+            </div>
+            <div class="col header_logo">
+                <img src="./assest/img/driver.png" alt="" class="header_logo--img">
+                <p class="header_logo--name">Distracted Driver</p>
+            </div>
+            <div class="col-4 header_navbar">
+                <a href="#demo"class="header_navbar--content">LIVE DEMO</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="infomation">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img class="d-block w-100" src="./assest/img/slider_bg1.png" alt="First slide">
+                <div class="slider_content carousel-caption d-none d-md-block">
+                    <header class="slider_content--heading">Detecting Distracted Driving</header>
+                    <p class="slider_content--description">
+                    Using Machine Learning model to detect distracted driving if happend in the input image
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="./assest/img/slider_bg2.png" alt="Second slide">
+                <div class="slider_content carousel-caption d-none d-md-block">
+                    <header class="slider_content--heading">Classification</header>
+                    <p class="slider_content--description">
+                        Dealing with 10 main types of distractions. Using dataset from American University in Cairo (AUC) - Distracted Driver Dataset v2
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="./assest/img/slider_bg3.png" alt=Third slide">
+                <div class="slider_content carousel-caption d-none d-md-block">
+                    <header class="slider_content--heading">Accuracy</header>
+                    <p class="slider_content--description">
+                        BiT-R50x1-M reach 95.58% accuracy >> 87.7% of previous best performance by a ResNet50. 
+                    </p>
+                    <p class="slider_content--description">
+                        => subtle changes in training procedures can dramatically improve performance and reduce training time. 
+                    </p>
+                </div>
+            </div>
+            </div>
+            <a class="slider_arrow carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="slider_arrow--left carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="slider_arrow carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="slider_arrow--right carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <div class="information_motivation">
+            <header class="motivation_title">Why it's important?</header>
+            <hr>
+            <p class="motivation_quotes">
+                How many traffic accidents have been committed by a distracted driver? 
+            </p>
+            <div class="motivation_content">
+                The <p class="text_highlight">World Health Organization (WHO)</p> reported <p class="text_highlight">1.25 million deaths yearly</p> due to road traffic accidents worldwide and the number has been continuously increasing over the last few years.
+            </div>
+            <div class="motivation_content">Unfortunately, nearly a <p class="text_highlight">fifth</p> of these accidents is caused by distracted drivers</div>
+        </div>
+    </section>
+
+    <section id="demo">
+        <header class="demo_title">Live Demo</header>
+        <hr>
+        <p class="demo_quotes">
+            Upload your driver image to get the prediction distraction type label 
+        </p>
+        <div class="text-center">
+            <button type="button" class="demo_heatmap-btn btn btn-primary btn-lg" data-toggle="button" aria-pressed="false" autocomplete="off">
+                Display Heatmap
+            </button> 
+        </div>
+
+        <div class="demo_upload--area">
+            <i class="demo_update--icon fa-regular fa-image"></i>
+            <p class="demo_update--text">Upload Image</p>
+        </div>
+
+        <div class="demo_output">
+            <div class="demo_output--result">
+                <div class="demo_output--icon--border">
+                    <i class="demo_output--icon fa-solid fa-check"></i>
+                </div>
+                <p class="demo_output--label--result">Result Label</p>
+            </div>
+            <div class="demo_output--accuracy">
+                <div class="demo_output--icon--border">
+                    <i class="demo_output--icon fa-solid fa-thumbs-up"></i>
+                </div>
+                <p class="demo_output--label--accuracy">Accuracy</p>
+            </div>
+        </div>
+
+        <div class="demo_similarImg">
+            <header class="demo_similarImg--title">Similar Label Images</header>
+            <hr>
+        </div>
+    </section>
+
+    <section id="gallery_banner">
+        <p class="banner_title">See the gallery with 10 labels 
+        of driver distractions here!</p>
+        <a href="#gallery_banner" class="banner_button btn btn-primary btn-lg" role="button" aria-pressed="true">Jump to Gallery</a>
+    </section>
+
+    <footer id="footer">
+        <a href="#footer" class="footer_link"><i class="fa-brands fa-github"></i></a>
+        <a href="#footer" class="footer_link"><i class="fa-regular fa-envelope"></i></a>
+        <p class="footer_text">Powered by Prof Dzung's UROP Team</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
